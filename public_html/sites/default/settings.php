@@ -756,11 +756,6 @@ $settings['entity_update_backup'] = TRUE;
  */
 $settings['migrate_node_migrate_type_classic'] = FALSE;
 
-// Automatically generated include for settings managed by ddev.
-if (file_exists(__DIR__ . '/settings.ddev.php') && getenv('IS_DDEV_PROJECT') == 'true') {
-  include __DIR__ . '/settings.ddev.php';
-}
-
 /**
  * Load local development override configuration, if available.
  *
@@ -779,8 +774,16 @@ if (file_exists(__DIR__ . '/settings.ddev.php') && getenv('IS_DDEV_PROJECT') == 
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 
+$settings['hash_salt'] = 'upXfKvFEMDvqetsEOHvpUisUjYxjvLrBBDVlKoYGGrQuRMReduIYDqbLHfkaBiIH';
 
 // Set $settings['config_sync_directory'] if not set in settings.php.
 if (empty($settings['config_sync_directory'])) {
   $settings['config_sync_directory'] = '../config/sync';
+}
+
+// Automatically generated include for settings managed by ddev.
+if (file_exists(__DIR__ . '/settings.ddev.php') && getenv('IS_DDEV_PROJECT') == 'true') {
+  include __DIR__ . '/settings.ddev.php';
+} else {
+  include __DIR__ . '/settings.prod.php';
 }
