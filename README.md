@@ -18,3 +18,10 @@ User name: admin  User password: admin
 > * **Откат конфигурации:** ddev drush cim -y
 > * **Экспорт переводов:** ddev drush locale:export en > config/locale/en.po && ddev drush locale:export ru > config/locale/ru.po
 > * **Импорт переводов:**  ddev drush locale:import en > config/locale/en.po && ddev drush locale:import ru > config/locale/ru.po
+
+## Модули
+> * admin_toolbar
+> * [REST UI](https://www.drupal.org/project/restui)
+> * [token](https://www.drupal.org/project/token)
+> * [pathauto](https://www.drupal.org/project/pathauto)
+> * [paragraphs](https://www.drupal.org/project/paragraphs)
