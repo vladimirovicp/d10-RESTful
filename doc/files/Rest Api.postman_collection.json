@@ -1,0 +1,436 @@
+{
+	"info": {
+		"_postman_id": "89271ca4-ed62-4c31-b99d-f22108ed7c51",
+		"name": "Rest Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "2511707"
+	},
+	"item": [
+		{
+			"name": "User Api",
+			"item": [
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"brecrebapr\", \"pass\":\"admin\"}"
+						},
+						"url": {
+							"raw": "http://drupal10theming.ddev.site/user/login?_format=json",
+							"protocol": "http",
+							"host": [
+								"drupal10theming",
+								"ddev",
+								"site"
+							],
+							"path": [
+								"user",
+								"login"
+							],
+							"query": [
+								{
+									"key": "_format",
+									"value": "json"
+								}
+							]
+						},
+						"description": "User Login"
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": {\r\n        \"value\": \"Demo\"\r\n    },\r\n    \"mail\": {\r\n        \"value\": \"demo@gmail.com\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "http://drupal10theming.ddev.site/user/register?_format=json",
+							"protocol": "http",
+							"host": [
+								"drupal10theming",
+								"ddev",
+								"site"
+							],
+							"path": [
+								"user",
+								"register"
+							],
+							"query": [
+								{
+									"key": "_format",
+									"value": "json"
+								}
+							]
+						},
+						"description": "User Login"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"value": "Hm_dXH64qYBxf-WaTdk6Sl-oVQfeplVQOFYaEe5FWYg",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46YWRtaW4=",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://drupal10theming.ddev.site/user/1?_format=json",
+							"protocol": "http",
+							"host": [
+								"drupal10theming",
+								"ddev",
+								"site"
+							],
+							"path": [
+								"user",
+								"1"
+							],
+							"query": [
+								{
+									"key": "_format",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"password": "admin",
+								"username": "admin"
+							}
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"value": "Hm_dXH64qYBxf-WaTdk6Sl-oVQfeplVQOFYaEe5FWYg",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"uid\": [\r\n        {\r\n            \"value\": 1\r\n        }\r\n    ],\r\n    \"uuid\": [\r\n        {\r\n            \"value\": \"c39ba5cf-290a-42bc-aecb-ff0c81b4f051\"\r\n        }\r\n    ],\r\n    \"langcode\": [\r\n        {\r\n            \"value\": \"en\"\r\n        }\r\n    ],\r\n    \"preferred_langcode\": [\r\n        {\r\n            \"value\": \"en\"\r\n        }\r\n    ],\r\n    \"preferred_admin_langcode\": [],\r\n    \"name\": [\r\n        {\r\n            \"value\": \"admin\"\r\n        }\r\n    ],\r\n    \"mail\": [\r\n        {\r\n            \"value\": \"admin@example.com\"\r\n        }\r\n    ],\r\n    \"timezone\": [\r\n        {\r\n            \"value\": \"America/Dominica\"\r\n        }\r\n    ],\r\n    \"status\": [\r\n        {\r\n            \"value\": true\r\n        }\r\n    ],\r\n    \"created\": [\r\n        {\r\n            \"value\": \"2023-04-16T09:18:29+00:00\",\r\n            \"format\": \"Y-m-d\\\\TH:i:sP\"\r\n        }\r\n    ],\r\n    \"changed\": [\r\n        {\r\n            \"value\": \"2023-06-12T12:59:46+00:00\",\r\n            \"format\": \"Y-m-d\\\\TH:i:sP\"\r\n        }\r\n    ],\r\n    \"access\": [\r\n        {\r\n            \"value\": \"2023-06-13T06:26:47+00:00\",\r\n            \"format\": \"Y-m-d\\\\TH:i:sP\"\r\n        }\r\n    ],\r\n    \"login\": [\r\n        {\r\n            \"value\": \"2023-06-07T10:00:12+00:00\",\r\n            \"format\": \"Y-m-d\\\\TH:i:sP\"\r\n        }\r\n    ],\r\n    \"init\": [\r\n        {\r\n            \"value\": \"admin@example.com\"\r\n        }\r\n    ],\r\n    \"roles\": [\r\n        {\r\n            \"target_id\": \"administrator\",\r\n            \"target_type\": \"user_role\",\r\n            \"target_uuid\": \"7c9c2bbf-2e5e-4940-806b-ee4c3f191c53\"\r\n        }\r\n    ],\r\n    \"default_langcode\": [\r\n        {\r\n            \"value\": true\r\n        }\r\n    ],\r\n    \"user_picture\": [\r\n        {\r\n            \"target_id\": 25,\r\n            \"alt\": \"\",\r\n            \"title\": \"\",\r\n            \"width\": 294,\r\n            \"height\": 266,\r\n            \"target_type\": \"file\",\r\n            \"target_uuid\": \"916bf991-e2ba-4409-baab-b0d130c514fc\",\r\n            \"url\": \"http://drupal10theming.ddev.site/sites/default/files/pictures/2023-06/profile1.png\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://drupal10theming.ddev.site/user/1?_format=json",
+							"protocol": "http",
+							"host": [
+								"drupal10theming",
+								"ddev",
+								"site"
+							],
+							"path": [
+								"user",
+								"1"
+							],
+							"query": [
+								{
+									"key": "_format",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"admin\", \"pass\":\"admin\"}"
+						},
+						"url": {
+							"raw": "http://drupal10theming.ddev.site/user/logout?_format=json&token=ynuAbj6bvRB2xRlKy2RTKnqBw4UFAr8UUxcGmlXYTdw",
+							"protocol": "http",
+							"host": [
+								"drupal10theming",
+								"ddev",
+								"site"
+							],
+							"path": [
+								"user",
+								"logout"
+							],
+							"query": [
+								{
+									"key": "_format",
+									"value": "json"
+								},
+								{
+									"key": "token",
+									"value": "ynuAbj6bvRB2xRlKy2RTKnqBw4UFAr8UUxcGmlXYTdw"
+								}
+							]
+						},
+						"description": "User Login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Node Api",
+			"item": [
+				{
+					"name": "Node List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "basic YWRtaW46YWRtaW4=",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://drupal10theming.ddev.site/node/9?_format=json",
+							"protocol": "http",
+							"host": [
+								"drupal10theming",
+								"ddev",
+								"site"
+							],
+							"path": [
+								"node",
+								"9"
+							],
+							"query": [
+								{
+									"key": "_format",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Node List Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "basic YWRtaW46YWRtaW4=",
+								"type": "text"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"value": "oDOMHpXzvzXc841z1AY-zVW9vnooWgI64c06KMXT2ZM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"type\":[{\"target_id\":\"article\"}]}"
+						},
+						"url": {
+							"raw": "http://drupal10theming.ddev.site/node/11?_format=json",
+							"protocol": "http",
+							"host": [
+								"drupal10theming",
+								"ddev",
+								"site"
+							],
+							"path": [
+								"node",
+								"11"
+							],
+							"query": [
+								{
+									"key": "_format",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Node List Copy",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "basic YWRtaW46YWRtaW4=",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://drupal10theming.ddev.site/node/9?_format=json",
+							"protocol": "http",
+							"host": [
+								"drupal10theming",
+								"ddev",
+								"site"
+							],
+							"path": [
+								"node",
+								"9"
+							],
+							"query": [
+								{
+									"key": "_format",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Node List Copy",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://drupal10theming.ddev.site/session/token?_format=json",
+							"protocol": "http",
+							"host": [
+								"drupal10theming",
+								"ddev",
+								"site"
+							],
+							"path": [
+								"session",
+								"token"
+							],
+							"query": [
+								{
+									"key": "_format",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Node List Copy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "admin",
+								"password": "admin"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "basic YWRtaW46YWRtaW4=",
+								"type": "text"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"value": "RSb9q3fH1171m5WwlVfvPnk4-T_HzjAUxAjEfbbjY9k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\":[{\"target_id\":\"article\"}],\r\n  \"title\":[{\"value\":\"Hello World\"}],\r\n  \"body\":[{\"value\":\"How are you?\"}]\r\n}"
+						},
+						"url": {
+							"raw": "http://drupal10theming.ddev.site/node?_format=json",
+							"protocol": "http",
+							"host": [
+								"drupal10theming",
+								"ddev",
+								"site"
+							],
+							"path": [
+								"node"
+							],
+							"query": [
+								{
+									"key": "_format",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
